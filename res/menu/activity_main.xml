@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menuShowDistances"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/showDistances"/>
+    <item
+        android:id="@+id/menuShowSizes"
+        android:orderInCategory="110"
+        android:showAsAction="never"
+        android:title="@string/showSizes"/>
+    
+
+</menu>
