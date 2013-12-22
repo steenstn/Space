@@ -60,8 +60,9 @@ public class MainActivity extends Activity {
 		if(view.thread!=null)
 		{
 			view.thread.setRunning(true);
-			view.calculateDistanceAndScale();
 		}
+
+		view.calculateDistanceAndScale();
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
