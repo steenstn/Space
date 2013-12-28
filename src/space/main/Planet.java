@@ -28,7 +28,7 @@ public class Planet extends CelestialBody{
     	Paint textPaint = new Paint();
     	textPaint.setARGB(255, 255, 255, 255);
     	textPaint.setAntiAlias(true);
-    	textPaint.setTextSize(15);
+    	textPaint.setTextSize(20);
     	c.drawCircle((float)(getDrawingX()),
     			(float)(getDrawingY()), (float)getDrawingRadius(), paint);
     	

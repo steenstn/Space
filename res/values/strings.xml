@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Space</string>
+    <string name="app_name">SimpleSpace</string>
     <string name="showDistances">Show real distances</string>
-    <string name="showSizes">Only real sizes</string>
+    <string name="showSizes">Only show real sizes</string>
     
 
 </resources>

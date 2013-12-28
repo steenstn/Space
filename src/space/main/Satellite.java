@@ -51,7 +51,7 @@ public class Satellite extends CelestialBody{
     	Paint textPaint = new Paint();
     	
 
-    	double alpha = (scale/5*255);
+    	double alpha = (scale/10*255);
     	if(alpha < 0.00001)
     		alpha = 0;
     	else if(alpha>255)
@@ -59,6 +59,7 @@ public class Satellite extends CelestialBody{
     	
     	textPaint.setARGB((int)alpha, 255, 255, 255);
     	textPaint.setAntiAlias(true);
+    	textPaint.setTextSize(18);
     	c.drawCircle((float)(getDrawingX()),
     			(float)(getDrawingY()), (float)getDrawingRadius(), paint);
     	

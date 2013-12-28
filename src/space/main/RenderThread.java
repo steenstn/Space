@@ -49,7 +49,7 @@ class RenderThread extends Thread {
 	    }
 	  }
 	  private void doDraw(Canvas canvas) {
-	    canvas.restore();
+	    //canvas.restore();
 	    canvas.drawColor(Color.BLACK);
 	    Paint linePaint = new Paint();
 	    linePaint.setARGB(255,50,50,50);
