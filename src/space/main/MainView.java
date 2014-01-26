@@ -23,7 +23,7 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback, OnT
 	public static int sizes = 1;
 	public static int orbits = 2;
 	
-	public int currentState = sizes;
+	public static int currentState = distances;
 	private static final int INVALID_POINTER_ID = -1;
 	// The ‘active pointer’ is the one currently moving our object.
 	private int mActivePointerId = INVALID_POINTER_ID;
@@ -252,7 +252,7 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback, OnT
     	bodies.add(new Planet("Uranus", uranusRadius, sunUranusDist, 0, 84.32, 17,170,170));
     	bodies.add(new Planet("Neptune", neptuneRadius, sunNeptuneDist, 0, 164.79, 34,34,255));
 
-    	bodies.add(new Planet("Voyager 1 (December 2013)", 1, sunVoyagerDist, 0, 0, 200,200,200));
+    	bodies.add(new Planet("Voyager 1 (as of December 2013)", 1, sunVoyagerDist, 0, 0, 200,200,200));
 
     	bodies.add(new Planet("Sirius", 1.711 * sunRadius, lyToKm(8.6) / earthRadius, 0, 0, 175,175,255));
     	bodies.add(new Planet("Capella", 12.2 * sunRadius, lyToKm(42.2) / earthRadius, 0, 0, 255,170,0));

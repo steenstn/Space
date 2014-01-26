@@ -4,6 +4,13 @@
     <string name="app_name">SimpleSpace</string>
     <string name="showDistances">Show real distances</string>
     <string name="showSizes">Only show real sizes</string>
+    <string name="about">About</string>
+    <string name="about_info">Made by Alexander Steen\n\n</string>
+    <string name="whats_this">This is a simple visualization of our solar system.  
+        Look at the sizes and distances of planets and moons or just line up all 
+        the planets and some of the biggest stars to easier see the difference in size.</string>
+    
+    
     
 
 </resources>

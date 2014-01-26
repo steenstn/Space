@@ -51,11 +51,13 @@ class RenderThread extends Thread {
 	  private void doDraw(Canvas canvas) {
 	    //canvas.restore();
 	    canvas.drawColor(Color.BLACK);
-	    Paint linePaint = new Paint();
-	    linePaint.setARGB(255,50,50,50);
+	    Paint textPaint = new Paint();
+	    textPaint.setARGB(255,200,200,200);
+	    textPaint.setTextSize(15);
+	    textPaint.setAntiAlias(true);
 	   // CelestialBody startPlanet = bodies.get(0);
 	  //  CelestialBody endPlanet = bodies.get(bodies.size()-1);
-	 //   canvas.drawLine((float)startPlanet.getDrawingX(),(float) startPlanet.getDrawingY(),(float) endPlanet.getDrawingX(), (float)endPlanet.getDrawingY(), linePaint);
+
 	    
 	    for(int i = 0; i < bodies.size(); i++)
 	    {

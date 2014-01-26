@@ -2,11 +2,10 @@ package space.main;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.Window;
-import android.view.WindowManager;
 
 public class MainActivity extends Activity {
 	
@@ -15,9 +14,9 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
-                                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        requestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
+       // getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
+        //                        WindowManager.LayoutParams.FLAG_FULLSCREEN);
         view = new MainView(this);
         setContentView(view);
 	}
@@ -82,6 +81,10 @@ public class MainActivity extends Activity {
 	        case R.id.menuShowSizes:
 	        	view.currentState = view.sizes;
 	        	view.calculateDistanceAndScale();
+	        	return true;
+	        case R.id.menuAbout:
+	        	Intent intent = new Intent(this,AboutActivity.class);
+            	startActivity(intent);
         	return true;
             default:
                 return super.onOptionsItemSelected(item);
