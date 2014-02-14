@@ -17,6 +17,7 @@ public abstract class CelestialBody {
 	protected int blue;
 	protected double drawingRadius;
 	protected double orbitTime;
+	private long currentTime = System.currentTimeMillis();
 	
 	public void setDrawingX(double x) {
 		drawingX = x;
@@ -28,6 +29,18 @@ public abstract class CelestialBody {
 	
 	public void setDrawingRadius(double radius) {
 		drawingRadius = radius;
+	}
+	
+	public float calculateOrbitalX() {
+		long oldTime = currentTime;
+		long deltaTime = System.currentTimeMillis() - oldTime;
+		return (float) (getX() * Math.cos((double)0.001f * deltaTime / orbitTime));
+	}
+	
+	public float calculateOrbitalY() {
+		long oldTime = currentTime;
+		long deltaTime = System.currentTimeMillis() - oldTime;
+		return (float) (getX() * Math.sin((double)0.001f * deltaTime / orbitTime));
 	}
 
 	public abstract void calculateDistanceAndScale(double screenX, double screenY, double zoomCenterX, double zoomCenterY, double scale);

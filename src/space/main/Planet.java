@@ -45,6 +45,7 @@ public class Planet extends CelestialBody{
 		setDrawingRadius((getRadius() / earthRadius) * scale);
 		if(getDrawingRadius() < 1)
 			setDrawingRadius(1);
+		
 		setDrawingX(screenX + zoomCenterX + getX() * scale);
 		setDrawingY(-screenY + zoomCenterY + getY() * scale);
 		

@@ -33,8 +33,8 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback, OnT
 	
 	int screenWidth;
 	int screenHeight;
-	float screenX = -100, screenY = 0, offsetX = 0, offsetY = 0;
-	float oldScreenX = screenX;
+	public float screenX = -100, screenY = 0, offsetX = 0, offsetY = 0;
+	public float oldScreenX = screenX;
 	float oldScreenY = screenY;
 	float oldX;
 	float oldY;
@@ -78,7 +78,7 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback, OnT
 	  
 	  @Override
 	  public void surfaceCreated(SurfaceHolder holder) {
-	    thread = new RenderThread(sh, ctx, new Handler(), bodies);
+	    thread = new RenderThread(sh, ctx, new Handler(), this, bodies);
 	    thread.setRunning(true);
 	    thread.start();
 	  }
@@ -152,20 +152,21 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback, OnT
 		        pointerIndex = (event.getAction() & MotionEvent.ACTION_POINTER_INDEX_MASK) 
 		                >> MotionEvent.ACTION_POINTER_INDEX_SHIFT;
 		        final int pointerId = event.getPointerId(pointerIndex);
-		        if (pointerId == mActivePointerId) {
+		        
+		        //if (pointerId == mActivePointerId) {
 		            // This was our active pointer going up. Choose a new
 		            // active pointer and adjust accordingly.
 		            final int newPointerIndex = pointerIndex == 0 ? 1 : 0;
 		            oldX = event.getX(newPointerIndex);
 		            oldY = event.getY(newPointerIndex);
 		            mActivePointerId = event.getPointerId(newPointerIndex);
-		        }
+		        //}
 		        pointerIndex2 = INVALID_POINTER_ID;
 		        break;
 		    }
 		
 		}
-		calculateDistanceAndScale();
+		//calculateDistanceAndScale();
 		return true;
 	}
   	
